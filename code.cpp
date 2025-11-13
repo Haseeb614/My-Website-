@@ -12,7 +12,7 @@ int qua[] = {20, 60, 34, 34, 22, 12};
 
 // Function declarations
 void taking_order();
-void repeat_order();
+void ask_for_another_order();
 
 // Function to show the menu to the customer
 void display_menu()
@@ -68,7 +68,7 @@ float bill_calculator(string ordered_item, int quantity)
 
         display_menu();
         taking_order();
-        repeat_order();
+        ask_for_another_order();
     }
 
     return bill;
@@ -166,9 +166,9 @@ void taking_order()
 }
 
 // Function to ask if customer wants to order again
-void repeat_order()
+void ask_for_another_order()
 {
-    cout << "Do you want to order again? (y/n) : ";
+    cout << "Do you want to order something else? (y/n) : ";
     char ch;
     cin >> ch;
 
@@ -187,7 +187,8 @@ int main()
 {
     display_menu();
     taking_order();
-    repeat_order();
+    ask_for_another_order();
     return 0;
 }
+
 
